@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="crud">
+        <form id="form">
+            <div class="head">
+                <h2>crud</h2>
+                <p>product managemnt system</p>
+            </div>
+            <div class="inputs">
+                <input type="text" id="title" placeholder="title" />
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="price" />
+                    <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes" />
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads" />
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount" />
+                    <small id="total"></small>
+                </div>
+                <input type="number" id="count" placeholder="count" />
+                <input type="number" id="category" placeholder="categoty" />
+                <button id="submit">create</button>
+            </div>
+        </form>
+        <div class="outputs">
+            <div class="input-serach">
+                <input type="text" id="serach" placeholder="Serach" />
+                <div class="buttoun-serach">
+                    <button onclick="getserach(this.id)" id="serach-title">Serach By Title</button>
+                    <button onclick="getserach(this.id)" id="serach-gategory">Serach By Gategory</button>
+                </div>
+            </div>
+            <div id="deleteAll">DeleteAll</div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>Total</th>
+                    <th>categoty</th>
+                    <th>upate</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
